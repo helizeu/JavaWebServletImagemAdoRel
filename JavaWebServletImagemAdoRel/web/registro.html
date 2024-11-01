@@ -1,0 +1,29 @@
+<html lang = "pt-br">
+    <head>
+        <title> Cadastro de Usuários </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body style="background-color: greenyellow;" onload="formlogin.nome.focus()">
+        <div align = center>
+            <form action="javaJSP\registro.jsp" name = formreg method="post" >
+                <table align = center>
+                    <tr><td></td><td>
+                    <tr><td colspan = 2 align = center>*** Registro de Usuários *** </td></tr>
+                    <tr><td ><input type="text" name = nome size = 40 value = "" placeholder = "Digite seu nome..." required> </td></tr>
+                    <tr><td ><input type="email" name = email size = 40 value = "" placeholder="Digite seu e-mail..." required> </td></tr>
+                    <tr><td ><input type="text" name = celular size = 40 value = "" placeholder="Digite seu celular..." required> </td></tr>
+                    <tr><td ><input type="password" name = senha size = 40 value = "" placeholder="Digite sua senha..." required> </td></tr>
+                    <tr>
+                        <td align="center" colspan="2">Selecione nível de acesso :
+                           <select name="nivel" id="idnivel" required >
+                                <option value="" selected>&nbsp;</option>
+                                <option value="administrador"> Administrador </option>
+                                <option value="gerente"> Gerente </option>
+                                <option value="normal"> Normal </option>
+                            </select> </td></tr>
+                </table>
+                <p>    <center>
+                    <input type="hidden" name = oper >
+                    <input type="submit" value="Gravar" onclick="formreg.oper.value = 'gravar';">
+                </center>  </form> </div> </body> </html>
